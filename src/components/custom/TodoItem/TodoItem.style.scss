@@ -1,27 +1,23 @@
-.todo-item{
+.todo-item {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
-	// background-color: #24f160;
 	color: silver;
 	border-radius: 4px;
 	padding: 8px 1rem;
 	font-size: 1rem;
 
-	// text-shadow: 0 0 5px #000000;
-
-	.todo-actions{
+	.todo-actions {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 		gap: 4px;
-		*{
+
+		* {
 			border: none;
 			outline: none;
 			background-color: transparent;
-			// padding: 4px;
-			// color:white;
 			cursor: pointer;
 		}
 	}

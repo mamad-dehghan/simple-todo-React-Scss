@@ -10,10 +10,12 @@ const TodoManager = () => {
 	const [editTodoId, setEditTodoId] = useState(null);
 
 
+	// create a new color for todo background
 	const generateColor = () => {
 		return `#${Math.floor(Math.pow(16, 6) * Math.random()).toString(16).padStart(6, '0')}`
 	}
 
+	// adding new todo
 	const addTodo = () => {
 		if (inputValue === '')
 			return
@@ -21,14 +23,16 @@ const TodoManager = () => {
 		setInputValue('');
 	}
 
+	// remove a todo
 	const removeTodo = (id) => {
 		setTodoList(todoList.filter(item => item.id !== id))
-		if(id === editTodoId){
+		if (id === editTodoId) {
 			setEditTodoId(null);
 			setInputValue('')
 		}
 	}
 
+	// edit a todo
 	const editTodo = () => {
 		if (inputValue === '')
 			return;
@@ -45,6 +49,7 @@ const TodoManager = () => {
 		setEditTodoId(null)
 	}
 
+	// load todo info to edit todo
 	const loadEditTodoInput = (id) => {
 		setEditTodoId(id)
 		const title = todoList.find(item => item.id === id)?.inputValue
